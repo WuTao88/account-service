@@ -17,7 +17,7 @@ public class accountServiceBack implements accountService {
         String fallback=null;
         account account=mapper.findOne(name);
         if (account.getPassword().equals(pass)&&account.getStatus()==1){
-            fallback="info:"+account.getId()+","+account.getUsername()+","+account.getReg_time();
+            fallback="info:"+account.getId()+","+account.getUsername()+","+account.getRegister_time();
         }
 
         return fallback;
