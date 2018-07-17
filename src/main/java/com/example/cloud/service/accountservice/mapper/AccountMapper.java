@@ -17,4 +17,7 @@ public interface AccountMapper {
 
     @Select("select * from accounts")
     public List<account> findAll();
+
+    @Select("select * from accounts where username=#{name}")
+    public account findOne(@Param("name")String name);
 }
