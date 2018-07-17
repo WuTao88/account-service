@@ -12,8 +12,8 @@ import java.util.List;
 @Mapper
 public interface AccountMapper {
 
-    @Insert("insert into accounts (username,password) values (#{username},#{password})")
-    public void add(@Param("usernmae") String name,@Param("password") String pass);
+    @Insert("insert into accounts (username,password) values (#{name},#{pass})")
+    public void add(@Param("name") String name,@Param("pass") String pass);
 
     @Select("select * from accounts")
     public List<account> findAll();
